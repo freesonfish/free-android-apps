@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+   <Button android:layout_width="wrap_content" 
+           android:layout_height="wrap_content" 
+           android:id="@+id/btClose" 
+           android:padding="0px" 
+           android:height="10px" 
+           android:textSize="15px" 
+           android:text="Stop Service" android:width="320px"></Button>
+
+    <TextView  
+    android:id="@+id/textview"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/status" android:paddingLeft="4px"/>
+    
+    <WebView 
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+    />
+
+  
+
+
+
+</LinearLayout>
