@@ -2,8 +2,7 @@
 
 <table>
 <tr>
-<td valign="top">http://free-android-apps.googlecode.com/svn/trunk/Local%20HTTPD/preview.png</td>
-<td width="20px"></td>
+
 <td valign="top">
 
 == Local HTTPD ==
@@ -37,15 +36,7 @@
   
  * Use the provided WebView to nagivate or open the default browser and navigate to http://localhost:8080
 
-</td>
-</tr>
-</table>
-
-<hr/>  
-
-<table>
-<tr>
-<td  valign="top">
+<br/><br/>
 
 === Hints ===
 
@@ -59,9 +50,8 @@
 
  * Run the apk file to install the application.
 
-</td>
-<td width="20px"></td>
-<td  valign="top">
+<br/><br/>
+
 === Trouble shooting: ===
 
 ==== Error: java.net.BindException: The address is already in use ====
@@ -75,7 +65,8 @@ Fix: Terminate the application manually
  * Locate and click on 'Local HTTPD'
  
  * 'Force Stop'
-
 </td>
+<td width="20px"></td>
+<td valign="top">http://free-android-apps.googlecode.com/svn/trunk/Local%20HTTPD/preview.png</td>
 </tr>
-</table>
+</table> 
