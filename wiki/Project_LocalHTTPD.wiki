@@ -1,0 +1,81 @@
+#summary Local HTTPD Project Information
+
+<table>
+<tr>
+<td valign="top">http://free-android-apps.googlecode.com/svn/trunk/Local%20HTTPD/preview.png</td>
+<td width="20px"></td>
+<td valign="top">
+
+== Local HTTPD ==
+
+==== Verified devices: ====
+ 
+ HTC Magic 
+
+==== About: ====
+  
+ Local HTTPD is a light weight single threaded local web server on port 8080.
+
+ This provides the missing default functionality of allowing the default browser to open localhost and browser the file system.
+
+ The server used is a custom variation of [http://elonen.iki.fi/code/nanohttpd/ NanoHTTPD].
+
+ The server runs on localhost:8080, and will only accept incoming requests from
+ the local device.
+
+==== Installing: ====
+
+ * Go to to settings -> applications -> tick 'Unknown sources'
+
+ * Download the package here: [http://free-android-apps.googlecode.com/files/Local%20HTTPD.apk Download]
+
+ * Install the application.
+
+==== Usage: ====
+
+ * Run the application.
+  
+ * Use the provided WebView to nagivate or open the default browser and navigate to http://localhost:8080
+
+</td>
+</tr>
+</table>
+
+<hr/>  
+
+<table>
+<tr>
+<td  valign="top">
+
+=== Hints ===
+
+==== Installing other applications: ====
+
+ * Attach the device via usb and place the apk file on the device.
+
+ * Launch Local HTTPD
+
+ * Browser to /sdcard/ and 'download' the apk file.
+
+ * Run the apk file to install the application.
+
+</td>
+<td width="20px"></td>
+<td  valign="top">
+=== Trouble shooting: ===
+
+==== Error: java.net.BindException: The address is already in use ====
+ 
+Problem: You're already running a copy of the webserver locally.
+
+Fix: Terminate the application manually
+
+ * Settings -> Applications -> Manage applications -> Menu ->  Filter -> Running.
+
+ * Locate and click on 'Local HTTPD'
+ 
+ * 'Force Stop'
+
+</td>
+</tr>
+</table>
