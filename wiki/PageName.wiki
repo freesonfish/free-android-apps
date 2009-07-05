@@ -1,11 +1,29 @@
 #summary Application list
 
-= About =
-
-This is the base page to link to various applications.
-
 = Applications =
 
-* Local file browser: LocalHTTPD
-  * Enables browsing of http://localhost in the android browser.
-  * Allows applications to be saved to the device via usb and then downloaded and installed.
+<table>
+<tr>
+<td>http://free-android-apps.googlecode.com/svn/trunk/Local%20HTTPD/preview.png</td>
+<td width="20px"></td>
+<td valign="top">
+
+== Local HTTPD ==
+
+==== Features: ====
+  
+ * Enables browsing of localhost in the android browser.
+
+ * Lets you see the local file system via browser.
+
+ * Allows local (sdcard) apps to be 'downloaded' and installed.
+
+==== Resources: ====
+
+ * [Project:LocalHTTPD More Information] 
+
+ * [http://free-android-apps.googlecode.com/files/Local%20HTTPD.apk Download]
+
+</td>
+</tr>
+</table>
