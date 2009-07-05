@@ -1,4 +1,5 @@
 #summary Application list
+#labels Featured
 
 = Applications =
 
