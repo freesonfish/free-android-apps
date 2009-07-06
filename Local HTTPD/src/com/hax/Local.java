@@ -16,14 +16,28 @@ import android.webkit.WebViewClient;
 public class Local extends Activity implements OnClickListener {
 
 	WebView webview;
-	NanoHTTPD x;
+    WebView wNative; 
+    NanoHTTPD x;
+    TextView tv;
 	
 	/* To ensure we don't open a new window each click. */
 	public class LocalWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        	view.loadUrl(url);
-        	return(true);
+        	char last = '\0';
+        	if( url != null && url.length() > 0 ) last = url.charAt( url.length() - 1 ) ;
+        	if (!(last == '/')) {      		
+        		String styles = ".downloader { background: #181818; } .downloader a { color: #ff3333; }";       		
+        		String download = "<html><head><style>"+styles+"</style></head><body class='downloader'><a href='" + url + "'>Direct Download</a></body></html>";
+        		wNative.loadDataWithBaseURL("fake:://local", download, "text/html", "utf-8", "");
+        		wNative.setVisibility(android.view.View.VISIBLE);
+        		return(true);
+        	}
+        	else {
+        		wNative.setVisibility(android.view.View.GONE);
+        		view.loadUrl(url);
+        		return(false);
+        	}
         }
 	}
 	
@@ -37,12 +51,15 @@ public class Local extends Activity implements OnClickListener {
         webview = (WebView) findViewById(R.id.webview);
         webview.setVisibility(android.view.View.INVISIBLE);
         
+        wNative = (WebView) findViewById(R.id.webviewNative);
+        wNative.setVisibility(android.view.View.GONE);
+        
         Button button = (Button)findViewById(R.id.btClose);
         button.setOnClickListener(this);
 
         boolean success = true;
         
-        TextView tv = (TextView) this.findViewById(R.id.textview);
+        tv = (TextView) this.findViewById(R.id.textview);
         tv.setText("Ready!");
 
         try {
