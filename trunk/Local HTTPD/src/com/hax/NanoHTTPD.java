@@ -639,8 +639,15 @@ public class NanoHTTPD
 						msg += "<b>";
 						files[i] += "/";
 					}
+					
+					// Show file size
+					String extra = "";
+					if ( curFile.isFile())
+					{
+						extra = "target='_blank'";
+					}
 
-					msg += "<a href=\"" + encodeUri( uri + files[i] ) + "\">" +
+					msg += "<a " + extra + " href=\"" + encodeUri( uri + files[i] ) + "\">" +
 						   files[i] + "</a>";
 
 					// Show file size
